@@ -180,12 +180,6 @@ endif()
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
-install(TARGETS dynarmic EXPORT dynarmicTargets)
-install(EXPORT dynarmicTargets
-    NAMESPACE dynarmic::
-    DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/dynarmic"
-)
-
 configure_package_config_file(CMakeModules/dynarmicConfig.cmake.in
     dynarmicConfig.cmake
     INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/dynarmic"
